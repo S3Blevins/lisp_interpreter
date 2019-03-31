@@ -1,0 +1,150 @@
+Test cases:
+1) (define r 10)
+output: prompt> r
+
+2) (r)
+output: prompt> 10
+
+3) (2)
+output: prompt> 2
+
+4) (quote (+ 1 2))
+output: prompt> (+ 1 2)
+
+5) (quote (+ a b))
+output: prompt> (+ a b)
+
+6) (if (> 10 20) (+ 1 1) (+ 3 3))
+output: prompt> 6
+
+7) (if (< 10 20) (+ 1 1) (+ 3 3))
+output: prompt> 2
+
+8) (define a 3)
+output: prompt> a
+(define b 2)
+output: prompt> b
+(if (< a b) (+ 1 1) (+ 3 3))
+output: prompt> 6
+(if (> a b) (+ 1 1) (+ 3 3))
+output: prompt> 2
+
+9) 
+(define x 2)
+output: prompt> x
+(define y 2)
+output: prompt> y
+(if (< a b) (+ x y) (- x y))
+output: prompt> 0
+(if (> a b) (+ x y) (- x y))
+output: prompt> 4
+
+10) ** Pre defined fucntion call**
+(sqrt(4))
+output: prompt> 2
+(sin(90))
+output: prompt> 0.89399666
+(cos(90))
+output: prompt> -0.44807363 
+(tan(90))
+output: prompt> -1.9952004 
+
+11)
+(define x 2)
+(sqrt(x))
+output: prompt> 1.4142135 
+(sin(x))
+output: prompt> 0.9092974 
+(cos(x))
+output: prompt> -0.41614684
+(tan(x))
+output: prompt> -2.1850398
+
+12)
+(define r 10)
+output: prompt> r
+(set! r 5)
+output: prompt> 5
+(r)
+output: prompt> 5
+(set! r (* 2 2))
+output: prompt> 4
+(r)
+output: prompt> 4
+(set! r (* r r))
+output: prompt> 16
+(r)
+output: prompt> 16
+(set! r 2)
+output: prompt> 2
+
+13)
+(+ 2 3)
+output: prompt> 5
+(- 3 2)
+output: prompt> 1
+(* 2 3)
+output: prompt> 6
+(/ 6 2)
+output: prompt> 3
+
+14)
+(+ (+ 2 3) 5)
+output: prompt> 10
+(- (- 2 3) 5) 
+output: prompt> -6
+(* (* 2 3) 5)
+output: prompt> 30
+
+15)
+(define a 5)
+output: prompt> a
+(define b 10)
+output: prompt> b
+(+ a b)
+output: prompt> 15
+(- b a)
+output: prompt> 5
+(* b a)
+output: prompt> 50
+(/ b a)
+output: prompt> 2
+
+16)
+(define x 2)
+output: prompt> x
+(define y 4)
+output: prompt> y
+(define z 8)
+output: prompt> z
+(+ (+ x y) z)
+output: prompt> 14
+(* (* x y) z)
+output: prompt> 64
+(- (- x y) z)
+output: prompt> -10
+
+17)
+(defun ADD (x y) (+ x y)) // define ADD function
+(ADD (8 3))
+output: prompt> 11
+(defun SUB (x y) (- x y)) // define SUB function
+(SUB (3 2))
+output: prompt> 1
+(defun MUL (x y) (* x y)) // define MUL function
+(MUL (2 3))
+output: prompt> 6
+(defun DIV (x y) (/ x y)) // define DIV function
+(DIV (6 2))
+output: prompt> 3
+
+(defun ADD2 (x y z) (+ (+ x y) z))
+(ADD2(2 2 2))
+output: prompt> 6
+(defun MUL2 (x y z) (* (* x y) z))
+(MUL2(2 2 2))
+output: prompt> 8
+(defun SUB2 (x y z) (- (- x y) z))
+(SUB2 (2 2 2))
+output: prompt> -2
+
